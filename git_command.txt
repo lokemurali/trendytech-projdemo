@@ -1,0 +1,1046 @@
+   50  python Ingest_data.py User=postgres Password=mysecretpassword Host=localhost Port=5432 DB=postgres Table_Name=new_taxi_yellow URL=${URL}
+   51  clear
+   52  python Ingest_data.py --user=postgres --password=mysecretpassword --host=localhost --port=5432 --db=postgres --table_name=new_taxi_yellow --url=${URL}
+   53  echo $?
+   54  Docker build -t tax_ingest:v001 .
+   55  docker ps
+   56  docker ps -a
+   57  docker images
+   58  docker rename tax_ingest taxi_ingest
+   59  docker --help
+   60  docker rename --help
+   61  docker image --help
+   62  docker images
+   63  docker rm tax_ingest
+   64  docker image rm tax_ingest
+   65  docker image rm --help
+   66  docker image rm 597192e28ca3
+   67  docker images
+   68  Docker build -t taxi_ingest:v001 .
+   69  Docker run -it taxi_ingest:v001 \\n    --network=pg-network \\n    --user=postgres \\n    --password=mysecretpassword \\n    --host=localhost \n    --port=5432 \\n    --db=postgres \\n    --table_name=new_taxi_yellow \\n    --url=${URL}
+   70  Docker run -it taxi_ingest:v001 \\n    --network=pg-network \\n    --user=postgres \\n    --password=mysecretpassword \\n    --host=localhost \n    --port=5432 \\n    --db=postgres \\n    --table_name=new_taxi_yellow \\n    --url=${URL}
+   71  clear
+   72  Docker run -it taxi_ingest:v001 \\n    --network=pg-network \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=localhost \n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+   73  clear
+   74  Docker run -it taxi_ingest:v001 \\n    --network=pg-network \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=localhost \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+   75  clear
+   76  Docker run -it \\n    --network=pg-network \\n     taxi_ingest:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=localhost \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+   77  Docker run -it \\n    --network=pg-network \\n     taxi_ingest:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=localhost \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+   78  docker ps
+   79  docker network
+   80  docker network ls
+   81  clear
+   82  Docker run -it \\n    --network=pg-network \\n     taxi_ingest:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=localhost \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+   83  docker ps
+   84  docker inspect eff5da1c9b8e
+   85  Docker run -it \\n    --network=pg-network \\n     taxi_ingest:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=172.19.0.2 \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+   86  docker images
+   87  docker image rm taxi_ingest
+   88  docker image rm taxi_ingest:v001
+   89  docker image rm 597192e28ca3
+   90  docker kill 597192e28ca3
+   91  docker image kill 597192e28ca3
+   92  Docker run -it \\n    --network=pg-network \\n     taxi_ingest:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=172.19.0.2 \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+   93  docker build -t ingest_data:v001 .
+   94  Docker run -it \\n    --network=pg-network \\n     ingest-data:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=172.19.0.2 \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+   95  Docker run -it \\n    --network=pg-network \\n     ingest_data:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=172.19.0.2 \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+   96  python -m http:server
+   97  python -m http.server
+   98  Docker run -it \\n    --network=pg-network \\n     ingest_data:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=some-postgres \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+   99  Docker run -it \\n    --network=pg-network \\n     ingest_data:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=some-postgres \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}
+  100  docker exec -it ingest_data:v001 bash
+  101  docker ps
+  102  docker exec -it ingest_data bash
+  103  docker ps -a
+  104  docker ps
+  105  docker ps
+  106  docker-compose up
+  107  docker-compose up
+  108  docker-compose up
+  109  docker-compose up
+  110  docker-compose up
+  111  docker-compose up
+  112  docker-compose up
+  113  docker-compose down
+  114  git config --list --show-origin
+  115  git config --global user.name "Lokesh Murali"
+  116  git config --global user.email lokemurali@gmail.com
+  117  git config user.name
+  118  jupyter notbeok
+  119  jupyter notebook
+  120  docker login
+  121  $ docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+  122  cd documents
+  123  cd zoomcamp-2023
+  124  docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -d postgres
+  125  docker ps\t
+  126  yum install -y lsof
+  127  apt install -y lsof
+  128  brew install lsof
+  129  lsof -i:5432
+  130  lsof -i:5432
+  131  service postgresql stop
+  132  docker run --name some-postgres  -e POSTGRES_PASSWORD=mysecretpassword -v $(psd)/data:/var/lib/postgresql/data -d postgres
+  133  docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -v $(psd)/data:/var/lib/postgresql/data -d postgres
+  134  docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -v $(pwd)/data:/var/lib/postgresql/data -d postgres
+  135  docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -v $(pwd)/data:/var/lib/postgresql/data -d postgres
+  136  docker ps
+  137  docker ps -1
+  138  docker ps -a
+  139  docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -v $(pwd)/data:/var/lib/postgresql/data -d postgres
+  140  lsof -i tcp:5432
+  141  sudo ss -lptn 'sport = :5432'
+  142  lsof -i :5432
+  143  sudo lsof -i :8080
+  144  sudo lsof -i :5432
+  145  kill -9 787
+  146  sudo kill -9 787
+  147  sudo lsof -i :5432
+  148  sudo lsof -i :8080
+  149  docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -v $(pwd)/data:/var/lib/postgresql/data -d postgres
+  150  docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -v $(pwd)/data:/var/lib/postgresql/data -d postgres
+  151  postgres
+  152  psql
+  153  docker ps
+  154  docker run -it \\n    -p 80:80 \\n    -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' \\n    -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' \\n    -d dpage/pgadmin4
+  155  docker ps
+  156  docker inspect deb1be5c9e54
+  157  docker ps
+  158  docker inspect deb1be5c9e54
+  159  docker create network post-pgadmin
+  160  docker pull network
+  161  docker pull python
+  162  docker network create pg-admin
+  163  docker network rm pg-admin
+  164  docker network ls
+  165  docker network create pg-network
+  166  docker network ls
+  167  docker ps
+  168  docker stop postgres
+  169  docker stop deb1be5c9e54
+  170  \t\t\t\t docker run -it --rm --name postgresnet \\n\t\t\t\t  -e POSTGRES_PASSWORD=admin123 \\n\t\t\t\t  -v ${PWD}/pgdata:/var/lib/postgresql/data \\n\t\t\t\t --network=pg-network\n  postgres:15.0
+  171  docker run -it --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -v $(pwd)/data:/var/lib/postgresql/data --network=pg-network postgres
+  172  docker run -it --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -v $(pwd)/data:/var/lib/postgresql/data --network=pg-network postgres
+  173  docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -v $(pwd)/data:/var/lib/postgresql/data --network=pg-network -d postgres\n
+  174  docker run --name some-postgres -p 5432:5432 -e POSTGRES_PASSWORD=mysecretpassword -v $(pwd)/data:/var/lib/postgresql/data --network=pg-network -d postgres\n
+  175  docker ps
+  176  docker inspect 55de92c48d74
+  177  docker ps
+  178  docker stop 7669156b9eec
+  179  docker rm 7669156b9eec
+  180  docker ps
+  181  docker network ls
+  182  docker run -it \\n\t\t\t\t    -p 8080:80 \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' \\n\t\t\t\t    --network=pg-network\n\t\t\t\t    --name=pgadmin-doc\n    -d dpage/pgadmin4
+  183  docker run -it \\n    -p 8080:80 \\n    -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' \\n    -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' \\n    --network=pg-network\n    --name=pgadmin-doc\n    -d dpage/pgadmin4
+  184  docker run -it \\n    -p 80:80 \\n    -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' \\n    -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' \\n    --network=pg-network \\n    --name pgadmin-doc\n    -d dpage/pgadmin4
+  185  docker run -it \\n    -p 80:80 \\n    -e 'PGADMIN_DEFAULT_EMAIL=user@domain.com' \\n    -e 'PGADMIN_DEFAULT_PASSWORD=SuperSecret' \\n    --network=pg-network \\n    --name pgadmin-doc \\n    -d dpage/pgadmin4
+  186  docker ps
+  187  docker ps
+  188  docker compose ls
+  189  docker-compose stop
+  190  docker compose stop
+  191  docker ps
+  192  docker compose down
+  193  docker- compose down
+  194  docker-compose down
+  195  cd documents/zoomcamp-2023
+  196  docker-compose down
+  197  brew install git
+  198  sudo port install git
+  199  port install git
+  200  sudo port install git
+  201  sudo port install git
+  202  git init
+  203  git add .
+  204  git commit -m "first commit"
+  205  git commit -m "first commit"
+  206  git add .
+  207  git commit -m "first commit"
+  208  get remote add orgin https://github.com/lokemurali/Lokesh_ZoomCamp-2022.git
+  209  git remote add orgin https://github.com/lokemurali/Lokesh_ZoomCamp-2022.git
+  210  git push -u orgin master 
+  211  git pull --rebase orgin master
+  212  get remote add orgin https://github.com/lokemurali/ZoomCamp-2023.git
+  213  git remote add orgin https://github.com/lokemurali/ZoomCamp-2023.git
+  214  git push -u orgin master
+  215  git pull --rebase orgin master
+  216  git config --local -e
+  217  git push -u orgin master
+  218  git add
+  219  git add ?
+  220  git add .
+  221  git remote add orgin https://github.com/lokemurali/ZoomCamp-2023.git
+  222  git push -u orgin master
+  223  git pull origin main
+  224  git pull --rebase origin main
+  225  git commit
+  226  git commit
+  227  git log
+  228  git push -u orgin master
+  229  git pull --rebase orgin master
+  230  git remote -v
+  231  git remote set-url origin https://github.com/lokemurali/Lokesh_ZoomCamp-2022.git
+  232  .get
+  233  git --version
+  234  git
+  235  got init --help
+  236  git init --help
+  237  cd documents
+  238  cd zoomcamp-2023
+  239  git init
+  240  which git
+  241  docker-compose up
+  242  docker ps
+  243  git remote add origin https://github.com/lokemurali/NewLokesh-Zoom.git
+  244  git branch -M main
+  245  git push -u origin main
+  246  git push -u origin main
+  247  git push -u origin main
+  248  git push -u origin main
+  249  git push -u origin main
+  250  git push -u origin main
+  251  git push -u origin main
+  252  git remote add origin https://github.com/lokemurali/NewLokesh-Zoom.git
+  253  git push -u origin main
+  254  git remote add origin https://github.com/lokemurali/NewLokesh-Zoom.git
+  255  git push -u origin main
+  256  * history restored
+  257  git history restore
+  258  git push -u origin main
+  259  git remote add origin https://github.com/lokemurali/NewLokesh-Zoom.git
+  260  git push -u origin main
+  261  git pull --rebase orgin master
+  262  git pull --rebase orgin master
+  263  cd
+  264  docker ps
+  265  docker ps
+  266  docker-compose up
+  267  cd documents
+  268  cd zoomcamp-2023
+  269  docker-compose up
+  270  docker-compose up
+  271  docker ps
+  272  docke ps -a
+  273  docker ps -a
+  274  docker ps -a
+  275  docker-compose up
+  276  sudo lsof -1 : 5432
+  277  sudo lsof -l : 5432
+  278  sudo lsof -1 : 5432
+  279  sudo lsof --help
+  280  sudo lsof -l : 5432
+  281  sudo lsof -1 : 5432
+  282  lsof -i :5432
+  283  lsof -i :8000
+  284  lsof -i :8080
+  285  docker-compose up
+  286  sudo lsof -i :5432
+  287  sudo kill --help
+  288  sudo kill 9 516
+  289  sudo lsof -i :5432
+  290  docker-compose up
+  291  docker-compose up
+  292  ls
+  293  docker-compose up
+  294  clear
+  295  ls
+  296  docker ps
+  297  docker ps -a
+  298  docker-compose up
+  299  docker_compose up
+  300  docker compose up
+  301  docker compose up
+  302  docker-compose up
+  303  exit
+  304  cd documents
+  305  cd zoomcamp-2023
+  306  docker-compose up
+  307  docker_compose up -d
+  308  docker_compose up d
+  309  docker-compose up
+  310  docker_compose up
+  311  docker_compose up -d
+  312  docker_compose up .
+  313  git init
+  314  git add .
+  315  git remote add origin https://github.com/lokemurali/Lokesh_ZoomCamp-2022.git
+  316  git push -u origin main
+  317  git pull --rebase orgin master
+  318  git init
+  319  git add .
+  320  git remote add origin git remote add origin https://github.com/lokemurali/NewLokesh-ZoomCamp-2021.git
+  321  git remote add origin git remote add origin https://github.com/lokemurali/NewLokesh-ZoomCamp-2021.git
+  322  git fetch origin master
+  323  git init
+  324  git add .
+  325  git push -u origin main
+  326  git remote add origin https://github.com/lokemurali/NewLokesh-ZoomCamp-2021.git
+  327  git branch -M main
+  328  git push -u origin main
+  329  git init
+  330  git branch -m master
+  331  git init
+  332  git add .
+  333  git commit
+  334  cd documents
+  335  cd zoomcamp-2023
+  336  docker
+  337  docker ps
+  338  docker compose up
+  339  docker compose up
+  340  docker-compose up
+  341  ls
+  342  cd ..
+  343  ls
+  344  ZoomCamp-2023
+  345  cd ZoomCamp-2023
+  346  docker-compose up
+  347  git commit -m "first commit after disgard changes"
+  348  git push -u origin main
+  349  git branch -m master
+  350  git push -u origin main
+  351  git remote add origin https://github.com/lokemurali/NewLokesh-ZoomCamp-2021.git
+  352  git push -u origin main
+  353  git push -u origin master
+  354  cd documents
+  355  cd zoomcamp-2023
+  356  brew install git-lfs
+  357  git add file.psd
+  358  jupyter notebook
+  359  docker ps
+  360  docker network ls
+  361  cd documents
+  362  cd zoomcamp-2023
+  363  URL="https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2021-01.parquet"
+  364  Docker run -it \\n    --network=zoomcamp-2023_default \\n     ingest_data:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=172.19.0.2 \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}   
+  365  clear
+  366   Docker run -it \\n    --network=zoomcamp-2023_default \\n     ingest_data:v001 \\n      --user=postgres \\n      --password=mysecretpassword \\n      --host=PostgresDatabase \\n      --port=5432 \\n      --db=postgres \\n      --table_name=new_taxi_yellow \\n      --url=${URL}   
+  367  git lfs install
+  368  ls
+  369  cd data
+  370  ls
+  371  git lfs track data
+  372  cd ..
+  373  git lfs track data
+  374  git add .gitattributes
+  375  git add fiel.psd
+  376  git add data.psd
+  377  git lfs migrate
+  378  git add file.psd
+  379  git add data
+  380  git commit -m "added large file"
+  381  git push
+  382  git add data
+  383  git commit -m "added large file"
+  384  git push
+  385  git lfs track "*.psd"
+  386  git add .gitattributes
+  387  git lfs install
+  388  git lfs track "data"
+  389  ls
+  390  ls
+  391  git lfs track "data"
+  392  git add .gitattributes
+  393  git commit -m "added large file"
+  394  git add data
+  395  git commit -m "added large file"
+  396  git push orgin master
+  397  git push orgin main
+  398  git push origin master
+  399  git push origin master
+  400  git push orgin main
+  401  git push origin main
+  402  git push origin master
+  403  get pull
+  404  git pull
+  405  git push origin master
+  406  git pull
+  407  git commit
+  408  exit
+  409  docker ps
+  410  docker compose down
+  411  cd documents/zoomcamp-2023
+  412  docker compose down
+  413  exit
+  414  cd documents
+  415  cd zoomcamp-2023
+  416  docker-compose up
+  417  cd ..
+  418  docker-compose up
+  419  cd zoomcamp-2023
+  420  docker-compose up
+  421  docker-compose config
+  422  docker-compose config
+  423  docker-compose config
+  424  docker-compose copy config
+  425  docker-compose_copy config
+  426  docker-compose_copy config
+  427  docker-compose config
+  428  docker-compose config
+  429  docker-compose config
+  430  docker-compose up
+  431  gcloud -v
+  432  glcoud --v
+  433  glcoud --version
+  434  python --v
+  435  python3 --version
+  436  glcoud --version
+  437  cd ~
+  438  pwd
+  439  ls -ltr
+  440  ls -lth
+  441  ./google-cloud-sdk/install.sh
+  442  ./google-cloud-sdk/install.sh --help
+  443  ./google-cloud-sdk/install.sh --screen-reader=true
+  444  ./google-cloud-sdk/install.sh --screen-reader=true
+  445  ./google-cloud-sdk/bin/gcloud init
+  446  gcloud --v
+  447  gcloud -v
+  448  gcloud --version
+  449  gcloud
+  450  gcli
+  451  cd docuemnts
+  452  cd documents
+  453  cd zoomcamp-2023
+  454  ./zoomcamp*
+  455  export GOOGLE_APPLICATION_CREDENTIALS="./zoomcamp*\n"
+  456  export GOOGLE_APPLICATION_CREDENTIALS="./zoomcamp*"
+  457  ${GOOGLE_APPLICATION_CREDENTIALS}
+  458  ls -ltr ./zoomcamp*
+  459  pwd
+  460  export GOOGLE_APPLICATION_CREDENTIALS="/Users/m0l0ge6/documents/zoomcamp-2023/zoomcamp-2024-409714-1a9eec901119.json"
+  461  ${GOOGLE_APPLICATION_CREDENTIALS}
+  462  gcloud auth application-default login
+  463  cd ~
+  464  gcloud auth application-default login
+  465  gclous init
+  466  gcloud init
+  467  ./google-cloud-sdk/install.sh
+  468  ./google-cloud-sdk/install.sh --screen-reader=true
+  469  gcloud init
+  470  gcloud init
+  471  gcloud auth application-default login
+  472  export GOOGLE_APPLICATION_CREDENTIALS=/Users/m0l0ge6/Documents/ZoomCamp-2023/zoomcamp-2024-409714-1a9eec901119.json
+  473  gcloud auth application-default login
+  474  brew tap hashicorp/tap\nbrew install hashicorp/tap/terraform
+  475  docker compose --v
+  476  docker compose -v
+  477  git config pull.rebase true   # rebase
+  478  git config pull.rebase true
+  479   git config pull.rebase false
+  480   git config pull.rebase false
+  481  code ./.ssh/config
+  482  ssh de-zoomcamp-2024
+  483  cd .ssh/
+  484  .ssh
+  485  cd ~
+  486  cd ..
+  487  cd ..
+  488  cd /
+  489  cd /ssh
+  490  cd ~
+  491  cd .ssh
+  492  cd ~/.ssh
+  493  ls -l -a
+  494  cd docuemnts
+  495  cd documents
+  496  cd zoomcamp2023
+  497  cd zoomcamp-2023
+  498  ls -a
+  499  find . -name 'id-rsa*' -print
+  500  cd ~
+  501  pwd
+  502  ls
+  503  ls -a
+  504  mkdir ./.ssh
+  505  ls -ltra
+  506  cd .
+  507  ls
+  508  cd ..
+  509  ;s
+  510  ls
+  511  cd ~/.ssh
+  512  ls
+  513  ssh-keygen -t rsa -f gcp_ssh  -C lokesh -b 2048
+  514  ls
+  515  cat gcp_ssh.pub
+  516  cd ~
+  517  pwd
+  518  ssh -i /.ssh/gcp_ssh lokesh@34.93.73.109
+  519  ssh -i ~/.ssh/gcp_ssh lokesh@34.93.73.109
+  520  exit
+  521  cd documents/zoomcamp-2023
+  522  docker-compose up
+  523  docker-compose up -d
+  524  docker-compose down
+  525  ssh de-zoomcamp-2024
+  526  ssh de-zoomcamp-2024
+  527  ssh 
+  528  ssh de-zoomcamp-2024
+  529  ssh de-zoomcamp-2024
+  530  clear
+  531  ssh de-zoomcmap-2024
+  532  cd .ssh
+  533  ls -ltra
+  534  code config
+  535  cd ~
+  536  ssh de-zoomcmap-2024
+  537  ssh de-zoomcmap-2024
+  538  cd ~/.ssh
+  539  touch config
+  540  code config
+  541  code config
+  542  vscode config
+  543  code
+  544  cd ~
+  545  code
+  546  code config
+  547  code
+  548  clear
+  549  code config
+  550  ls
+  551  mv ./config ./.ssh
+  552  ls
+  553  cd ./.ssh
+  554  ls
+  555  code config
+  556  cd ~
+  557  ssh de-zoomcamp-2024
+  558  code ./.ssh/confid
+  559  code ./.ssh/config
+  560  ssh de-zoomcamp-2024
+  561  docker ps
+  562  ssh de-zoomcamp-2024
+  563  cd documents/
+  564  ls
+  565  cd Zoomcamp-2023
+  566  ls
+  567  pwd
+  568  cd ..
+  569  ls
+  570  cd ZoomCamp-2023
+  571  ls
+  572  pwd
+  573  ld
+  574  ls
+  575  scp
+  576  scp ./zoomcamp-2024-409714-1a9eec901119.json lokesh@:35.200.160.125 /home/lokesh/NewLokesh-ZoomCamp-2021
+  577  scp ./zoomcamp-2024-409714-1a9eec901119.json de-zoomcamp-2024@:35.200.160.125 /home/lokesh/NewLokesh-ZoomCamp-2021
+  578  clear
+  579  sftp de-zoomcamp-2024
+  580  ssh de-zoomcamp-2024
+  581  ssh de-zoomcamp-2024
+  582  cd .ssh
+  583  ls
+  584  vi config
+  585  cd ~
+  586  ssh de-zoomcamp-2024
+  587  ssh de-zoomcamp-2024
+  588  docker ps
+  589  lsof -i :5432`wi\nexit\nslg
+  590  sudo lsof -i :5432
+  591  sudo kill 9 859
+  592  sudo kill 9 859
+  593  sudo lsof -i :5432
+  594  ssh de-zoomcamp-2024
+  595  ssh de-zoomcamp-2024
+  596  ssh de-zoomcamp-2024
+  597  cd .ssh
+  598  ls
+  599  vi config
+  600  cd ~
+  601  ssh 34.100.218.238
+  602  ssh de-zoomcamp-2024
+  603  python testscp.py
+  604  python --version
+  605  gcli
+  606  gcloud --version
+  607  exit
+  608  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  609  pip install gcli
+  610  pip install google
+  611  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  612  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py/usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  613  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  614  pip install bigquery
+  615  pip update pandas
+  616  pip upgrade pandas
+  617  pip --upgrade pandas
+  618  pip --update pandas
+  619  pip -m install --upgrade pandas
+  620  python -m pip install --upgrade pandas
+  621  python -m pip install --upgrade pandas 1.3.4
+  622  pip install bigquery
+  623  pip install bigquery
+  624  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  625  pip3 install google
+  626  pip3 install --upgrade pip
+  627  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  628  pip/usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  629  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  630  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  631  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  632  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  633  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  634  pip install google-api-python-client\npip install google-cloud-dns
+  635  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  636  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  637  pip install --upgrade google-api-python-client
+  638  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  639  pip install google-cloud
+  640  pip install google-cloud-vision
+  641  pip install google.cloud.bigquery
+  642  pip install google.cloud.storage
+  643  pip install google
+  644  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  645  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  646  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  647  pip install google-cloud-bigquery
+  648  pip3 install google-cloud-bigquery
+  649  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  650  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  651  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  652  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  653  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  654  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  655  clear
+  656  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  657  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  658  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  659  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  660  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  661  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  662  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  663  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  664  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  665  clear
+  666  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  667  /usr/local/bin/python3 /Users/m0l0ge6/Documents/test-gcp/scp_sa.py
+  668  /usr/local/bin/python3 /Users/m0l0ge6/Library/CloudStorage/OneDrive-WalmartInc/ODS-GCP-DOCs/GCC-BigQuery/GccBQ.py
+  669  ./sathya.py
+  670  sathya.py
+  671  python sathya.py
+  672  python sathya.py MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC4/6AEmMoR1LkI2s7wj66lI4QL0oY20IDwwc/07q8G1PzFutjZSzIIkfY7H7J1t2YNPKejDHrP8mzcq17V7vUTkHmij4itgtx5ZKsTaTk6auPSFE0S8leIS0xc7W+vixomWrvdsn8boknW1CX5xsl6LwT3ol4llxV/8Tj31ixLbM45nwukf8tyaajRGasKtC7yLYon2fatU5yV9sVlXwtbWGOpip7EqpUGlPncU8Hn6C+AHlgbG7wnWvVbg7u8VoGClL72TEJ4lSPCapkJGcImWp+WW7CYF4Avn5hx50YiKN5aM30q4vOkFXzPUIdSmEyQqJa3Te4KbawdwooNXnejAgMBAAECggEBALBi2hlH7HJv1jSBG4n2FNhTMpVrFpiw2B+1SygHY04qSQ/mBNe5gGz3bkQVBryCLoU0bcliHr6iL/V+V5+2hGkw+Shrni+Bc+EygIKzcuMmAy3MOWh1M8w5rwdzQ2emQzqKjFDm3ZZld+2ivMqYJIWgyyWo5AcHNHKWdnCm/fiymAfiIIhz1YhNAhA+CBPru+F/FT6XVDYNGzyt9Mum+MXDU6N/LZazWKSOfpdi/8WoyooB3hmACdvpQo7FarGH4bmDEG3gWCzXqBl+ZZ/S18jNizHH3+e0xTK7LwjF311eC+sBi4LqwZZA65gdjxgiaFk6zkQAvxUAJvzl5BIQPqECgYEA4FOXDE+sgH1Q4uYEF+QCjQKJ49ZJmk/gI7Z/SPKcVqQBDF0BlmCm4IHA7bm9uUOaQJHmHOWHBuD3hPmsInankJlD8aMyJtHNa/YMhWQmgX7yJjyVwJD14rB4yTAj0yvoT1lOT7es0ZDvPHKd8AtatziPcbwZmVKfetO0ooiGetsCgYEA0x6ApEdxfcI1+XXpe4MazzfnqeaRA1VXitOUrtNZt3EUISJkG1475rLEOGxbWlsyXDmPcBYyq+bDBKZG9pzMQOK9rpXvmSKdQO8O4w3SOY0kM/fR2DOvxkmi1zSAi7wpCXsK/W6prBy51uMFy1wL97y40/crPVFDQgZk6z9PPNkCgYADjK8OLdCP8+usu3EDI8N6kbi21zQw8eSdDA01jUk2AcBWfr5Ar+TUFpmD6XV8EfrF3MkkWelqDXM9Mmor3W7HVfWCRE/N13IFrE4EalJFqEmSm1DPTDvny10N6eoXNFGnt8UKc+CTLFTswu+G1dcooQd8CDrrdyg43FK2Y6ylEwKBgQCsPl2cKkG45aOdpIraX0uXNrhGULuNKaqjtB3BSOQQmyxeIC3mekqK3NzkX9tka7U5syiIvUOYJkyD1ZleCO1IHvW8o814ddowqRnPO26Bz9pyn8TQDNNjBp7Zz5b06o3ck0uTGx9JMaKZZF1M3gtRkuKE5Uqc21jxXEAoAl4GeQKBgQCEu4m2OPUrKVbnnzRuy2AAl1lzlDF7TOU/S7guoy0XXAh9EKMJPiEZOkh6U3HgmwRbFWH9pewNkRgzKJyDu08Yb5zn6yF+GEd7x2pUFZ6gODamtdSUQotwbdICyaoapF4oEhVlW0KpKrGSo97FD/WmKVpO7FutJY8XyqvETv8FOw== 641df1b1-b554-4dca-b450-3b2ba1bfcbb3 1
+  673  pip install crypto
+  674  pip install crypto
+  675  python sathya.py MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC4/6AEmMoR1LkI2s7wj66lI4QL0oY20IDwwc/07q8G1PzFutjZSzIIkfY7H7J1t2YNPKejDHrP8mzcq17V7vUTkHmij4itgtx5ZKsTaTk6auPSFE0S8leIS0xc7W+vixomWrvdsn8boknW1CX5xsl6LwT3ol4llxV/8Tj31ixLbM45nwukf8tyaajRGasKtC7yLYon2fatU5yV9sVlXwtbWGOpip7EqpUGlPncU8Hn6C+AHlgbG7wnWvVbg7u8VoGClL72TEJ4lSPCapkJGcImWp+WW7CYF4Avn5hx50YiKN5aM30q4vOkFXzPUIdSmEyQqJa3Te4KbawdwooNXnejAgMBAAECggEBALBi2hlH7HJv1jSBG4n2FNhTMpVrFpiw2B+1SygHY04qSQ/mBNe5gGz3bkQVBryCLoU0bcliHr6iL/V+V5+2hGkw+Shrni+Bc+EygIKzcuMmAy3MOWh1M8w5rwdzQ2emQzqKjFDm3ZZld+2ivMqYJIWgyyWo5AcHNHKWdnCm/fiymAfiIIhz1YhNAhA+CBPru+F/FT6XVDYNGzyt9Mum+MXDU6N/LZazWKSOfpdi/8WoyooB3hmACdvpQo7FarGH4bmDEG3gWCzXqBl+ZZ/S18jNizHH3+e0xTK7LwjF311eC+sBi4LqwZZA65gdjxgiaFk6zkQAvxUAJvzl5BIQPqECgYEA4FOXDE+sgH1Q4uYEF+QCjQKJ49ZJmk/gI7Z/SPKcVqQBDF0BlmCm4IHA7bm9uUOaQJHmHOWHBuD3hPmsInankJlD8aMyJtHNa/YMhWQmgX7yJjyVwJD14rB4yTAj0yvoT1lOT7es0ZDvPHKd8AtatziPcbwZmVKfetO0ooiGetsCgYEA0x6ApEdxfcI1+XXpe4MazzfnqeaRA1VXitOUrtNZt3EUISJkG1475rLEOGxbWlsyXDmPcBYyq+bDBKZG9pzMQOK9rpXvmSKdQO8O4w3SOY0kM/fR2DOvxkmi1zSAi7wpCXsK/W6prBy51uMFy1wL97y40/crPVFDQgZk6z9PPNkCgYADjK8OLdCP8+usu3EDI8N6kbi21zQw8eSdDA01jUk2AcBWfr5Ar+TUFpmD6XV8EfrF3MkkWelqDXM9Mmor3W7HVfWCRE/N13IFrE4EalJFqEmSm1DPTDvny10N6eoXNFGnt8UKc+CTLFTswu+G1dcooQd8CDrrdyg43FK2Y6ylEwKBgQCsPl2cKkG45aOdpIraX0uXNrhGULuNKaqjtB3BSOQQmyxeIC3mekqK3NzkX9tka7U5syiIvUOYJkyD1ZleCO1IHvW8o814ddowqRnPO26Bz9pyn8TQDNNjBp7Zz5b06o3ck0uTGx9JMaKZZF1M3gtRkuKE5Uqc21jxXEAoAl4GeQKBgQCEu4m2OPUrKVbnnzRuy2AAl1lzlDF7TOU/S7guoy0XXAh9EKMJPiEZOkh6U3HgmwRbFWH9pewNkRgzKJyDu08Yb5zn6yF+GEd7x2pUFZ6gODamtdSUQotwbdICyaoapF4oEhVlW0KpKrGSo97FD/WmKVpO7FutJY8XyqvETv8FOw== 641df1b1-b554-4dca-b450-3b2ba1bfcbb3 1
+  676  pip3 install Crypto
+  677  pip install Crypto.PublicKey
+  678  pip install Crypto.signature
+  679  pip install Crypto
+  680  pyhton m install --upgrade pip
+  681  python m install --upgrade pip
+  682  python -m install --upgrade pip
+  683  pip install --upgrade pip
+  684  pip install Crypto
+  685  python sathya.py MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC4/6AEmMoR1LkI2s7wj66lI4QL0oY20IDwwc/07q8G1PzFutjZSzIIkfY7H7J1t2YNPKejDHrP8mzcq17V7vUTkHmij4itgtx5ZKsTaTk6auPSFE0S8leIS0xc7W+vixomWrvdsn8boknW1CX5xsl6LwT3ol4llxV/8Tj31ixLbM45nwukf8tyaajRGasKtC7yLYon2fatU5yV9sVlXwtbWGOpip7EqpUGlPncU8Hn6C+AHlgbG7wnWvVbg7u8VoGClL72TEJ4lSPCapkJGcImWp+WW7CYF4Avn5hx50YiKN5aM30q4vOkFXzPUIdSmEyQqJa3Te4KbawdwooNXnejAgMBAAECggEBALBi2hlH7HJv1jSBG4n2FNhTMpVrFpiw2B+1SygHY04qSQ/mBNe5gGz3bkQVBryCLoU0bcliHr6iL/V+V5+2hGkw+Shrni+Bc+EygIKzcuMmAy3MOWh1M8w5rwdzQ2emQzqKjFDm3ZZld+2ivMqYJIWgyyWo5AcHNHKWdnCm/fiymAfiIIhz1YhNAhA+CBPru+F/FT6XVDYNGzyt9Mum+MXDU6N/LZazWKSOfpdi/8WoyooB3hmACdvpQo7FarGH4bmDEG3gWCzXqBl+ZZ/S18jNizHH3+e0xTK7LwjF311eC+sBi4LqwZZA65gdjxgiaFk6zkQAvxUAJvzl5BIQPqECgYEA4FOXDE+sgH1Q4uYEF+QCjQKJ49ZJmk/gI7Z/SPKcVqQBDF0BlmCm4IHA7bm9uUOaQJHmHOWHBuD3hPmsInankJlD8aMyJtHNa/YMhWQmgX7yJjyVwJD14rB4yTAj0yvoT1lOT7es0ZDvPHKd8AtatziPcbwZmVKfetO0ooiGetsCgYEA0x6ApEdxfcI1+XXpe4MazzfnqeaRA1VXitOUrtNZt3EUISJkG1475rLEOGxbWlsyXDmPcBYyq+bDBKZG9pzMQOK9rpXvmSKdQO8O4w3SOY0kM/fR2DOvxkmi1zSAi7wpCXsK/W6prBy51uMFy1wL97y40/crPVFDQgZk6z9PPNkCgYADjK8OLdCP8+usu3EDI8N6kbi21zQw8eSdDA01jUk2AcBWfr5Ar+TUFpmD6XV8EfrF3MkkWelqDXM9Mmor3W7HVfWCRE/N13IFrE4EalJFqEmSm1DPTDvny10N6eoXNFGnt8UKc+CTLFTswu+G1dcooQd8CDrrdyg43FK2Y6ylEwKBgQCsPl2cKkG45aOdpIraX0uXNrhGULuNKaqjtB3BSOQQmyxeIC3mekqK3NzkX9tka7U5syiIvUOYJkyD1ZleCO1IHvW8o814ddowqRnPO26Bz9pyn8TQDNNjBp7Zz5b06o3ck0uTGx9JMaKZZF1M3gtRkuKE5Uqc21jxXEAoAl4GeQKBgQCEu4m2OPUrKVbnnzRuy2AAl1lzlDF7TOU/S7guoy0XXAh9EKMJPiEZOkh6U3HgmwRbFWH9pewNkRgzKJyDu08Yb5zn6yF+GEd7x2pUFZ6gODamtdSUQotwbdICyaoapF4oEhVlW0KpKrGSo97FD/WmKVpO7FutJY8XyqvETv8FOw== 641df1b1-b554-4dca-b450-3b2ba1bfcbb3 1
+  686  pip install pycryptodome
+  687  python sathya.py MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC4/6AEmMoR1LkI2s7wj66lI4QL0oY20IDwwc/07q8G1PzFutjZSzIIkfY7H7J1t2YNPKejDHrP8mzcq17V7vUTkHmij4itgtx5ZKsTaTk6auPSFE0S8leIS0xc7W+vixomWrvdsn8boknW1CX5xsl6LwT3ol4llxV/8Tj31ixLbM45nwukf8tyaajRGasKtC7yLYon2fatU5yV9sVlXwtbWGOpip7EqpUGlPncU8Hn6C+AHlgbG7wnWvVbg7u8VoGClL72TEJ4lSPCapkJGcImWp+WW7CYF4Avn5hx50YiKN5aM30q4vOkFXzPUIdSmEyQqJa3Te4KbawdwooNXnejAgMBAAECggEBALBi2hlH7HJv1jSBG4n2FNhTMpVrFpiw2B+1SygHY04qSQ/mBNe5gGz3bkQVBryCLoU0bcliHr6iL/V+V5+2hGkw+Shrni+Bc+EygIKzcuMmAy3MOWh1M8w5rwdzQ2emQzqKjFDm3ZZld+2ivMqYJIWgyyWo5AcHNHKWdnCm/fiymAfiIIhz1YhNAhA+CBPru+F/FT6XVDYNGzyt9Mum+MXDU6N/LZazWKSOfpdi/8WoyooB3hmACdvpQo7FarGH4bmDEG3gWCzXqBl+ZZ/S18jNizHH3+e0xTK7LwjF311eC+sBi4LqwZZA65gdjxgiaFk6zkQAvxUAJvzl5BIQPqECgYEA4FOXDE+sgH1Q4uYEF+QCjQKJ49ZJmk/gI7Z/SPKcVqQBDF0BlmCm4IHA7bm9uUOaQJHmHOWHBuD3hPmsInankJlD8aMyJtHNa/YMhWQmgX7yJjyVwJD14rB4yTAj0yvoT1lOT7es0ZDvPHKd8AtatziPcbwZmVKfetO0ooiGetsCgYEA0x6ApEdxfcI1+XXpe4MazzfnqeaRA1VXitOUrtNZt3EUISJkG1475rLEOGxbWlsyXDmPcBYyq+bDBKZG9pzMQOK9rpXvmSKdQO8O4w3SOY0kM/fR2DOvxkmi1zSAi7wpCXsK/W6prBy51uMFy1wL97y40/crPVFDQgZk6z9PPNkCgYADjK8OLdCP8+usu3EDI8N6kbi21zQw8eSdDA01jUk2AcBWfr5Ar+TUFpmD6XV8EfrF3MkkWelqDXM9Mmor3W7HVfWCRE/N13IFrE4EalJFqEmSm1DPTDvny10N6eoXNFGnt8UKc+CTLFTswu+G1dcooQd8CDrrdyg43FK2Y6ylEwKBgQCsPl2cKkG45aOdpIraX0uXNrhGULuNKaqjtB3BSOQQmyxeIC3mekqK3NzkX9tka7U5syiIvUOYJkyD1ZleCO1IHvW8o814ddowqRnPO26Bz9pyn8TQDNNjBp7Zz5b06o3ck0uTGx9JMaKZZF1M3gtRkuKE5Uqc21jxXEAoAl4GeQKBgQCEu4m2OPUrKVbnnzRuy2AAl1lzlDF7TOU/S7guoy0XXAh9EKMJPiEZOkh6U3HgmwRbFWH9pewNkRgzKJyDu08Yb5zn6yF+GEd7x2pUFZ6gODamtdSUQotwbdICyaoapF4oEhVlW0KpKrGSo97FD/WmKVpO7FutJY8XyqvETv8FOw== 641df1b1-b554-4dca-b450-3b2ba1bfcbb3 1
+  688  pip install Crypto
+  689  python sathya.py MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC4/6AEmMoR1LkI2s7wj66lI4QL0oY20IDwwc/07q8G1PzFutjZSzIIkfY7H7J1t2YNPKejDHrP8mzcq17V7vUTkHmij4itgtx5ZKsTaTk6auPSFE0S8leIS0xc7W+vixomWrvdsn8boknW1CX5xsl6LwT3ol4llxV/8Tj31ixLbM45nwukf8tyaajRGasKtC7yLYon2fatU5yV9sVlXwtbWGOpip7EqpUGlPncU8Hn6C+AHlgbG7wnWvVbg7u8VoGClL72TEJ4lSPCapkJGcImWp+WW7CYF4Avn5hx50YiKN5aM30q4vOkFXzPUIdSmEyQqJa3Te4KbawdwooNXnejAgMBAAECggEBALBi2hlH7HJv1jSBG4n2FNhTMpVrFpiw2B+1SygHY04qSQ/mBNe5gGz3bkQVBryCLoU0bcliHr6iL/V+V5+2hGkw+Shrni+Bc+EygIKzcuMmAy3MOWh1M8w5rwdzQ2emQzqKjFDm3ZZld+2ivMqYJIWgyyWo5AcHNHKWdnCm/fiymAfiIIhz1YhNAhA+CBPru+F/FT6XVDYNGzyt9Mum+MXDU6N/LZazWKSOfpdi/8WoyooB3hmACdvpQo7FarGH4bmDEG3gWCzXqBl+ZZ/S18jNizHH3+e0xTK7LwjF311eC+sBi4LqwZZA65gdjxgiaFk6zkQAvxUAJvzl5BIQPqECgYEA4FOXDE+sgH1Q4uYEF+QCjQKJ49ZJmk/gI7Z/SPKcVqQBDF0BlmCm4IHA7bm9uUOaQJHmHOWHBuD3hPmsInankJlD8aMyJtHNa/YMhWQmgX7yJjyVwJD14rB4yTAj0yvoT1lOT7es0ZDvPHKd8AtatziPcbwZmVKfetO0ooiGetsCgYEA0x6ApEdxfcI1+XXpe4MazzfnqeaRA1VXitOUrtNZt3EUISJkG1475rLEOGxbWlsyXDmPcBYyq+bDBKZG9pzMQOK9rpXvmSKdQO8O4w3SOY0kM/fR2DOvxkmi1zSAi7wpCXsK/W6prBy51uMFy1wL97y40/crPVFDQgZk6z9PPNkCgYADjK8OLdCP8+usu3EDI8N6kbi21zQw8eSdDA01jUk2AcBWfr5Ar+TUFpmD6XV8EfrF3MkkWelqDXM9Mmor3W7HVfWCRE/N13IFrE4EalJFqEmSm1DPTDvny10N6eoXNFGnt8UKc+CTLFTswu+G1dcooQd8CDrrdyg43FK2Y6ylEwKBgQCsPl2cKkG45aOdpIraX0uXNrhGULuNKaqjtB3BSOQQmyxeIC3mekqK3NzkX9tka7U5syiIvUOYJkyD1ZleCO1IHvW8o814ddowqRnPO26Bz9pyn8TQDNNjBp7Zz5b06o3ck0uTGx9JMaKZZF1M3gtRkuKE5Uqc21jxXEAoAl4GeQKBgQCEu4m2OPUrKVbnnzRuy2AAl1lzlDF7TOU/S7guoy0XXAh9EKMJPiEZOkh6U3HgmwRbFWH9pewNkRgzKJyDu08Yb5zn6yF+GEd7x2pUFZ6gODamtdSUQotwbdICyaoapF4oEhVlW0KpKrGSo97FD/WmKVpO7FutJY8XyqvETv8FOw== 641df1b1-b554-4dca-b450-3b2ba1bfcbb3 1
+  690  pip3 install pycryptodome
+  691  python -m pip install pycryptodome
+  692  python sathya.py MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC4/6AEmMoR1LkI2s7wj66lI4QL0oY20IDwwc/07q8G1PzFutjZSzIIkfY7H7J1t2YNPKejDHrP8mzcq17V7vUTkHmij4itgtx5ZKsTaTk6auPSFE0S8leIS0xc7W+vixomWrvdsn8boknW1CX5xsl6LwT3ol4llxV/8Tj31ixLbM45nwukf8tyaajRGasKtC7yLYon2fatU5yV9sVlXwtbWGOpip7EqpUGlPncU8Hn6C+AHlgbG7wnWvVbg7u8VoGClL72TEJ4lSPCapkJGcImWp+WW7CYF4Avn5hx50YiKN5aM30q4vOkFXzPUIdSmEyQqJa3Te4KbawdwooNXnejAgMBAAECggEBALBi2hlH7HJv1jSBG4n2FNhTMpVrFpiw2B+1SygHY04qSQ/mBNe5gGz3bkQVBryCLoU0bcliHr6iL/V+V5+2hGkw+Shrni+Bc+EygIKzcuMmAy3MOWh1M8w5rwdzQ2emQzqKjFDm3ZZld+2ivMqYJIWgyyWo5AcHNHKWdnCm/fiymAfiIIhz1YhNAhA+CBPru+F/FT6XVDYNGzyt9Mum+MXDU6N/LZazWKSOfpdi/8WoyooB3hmACdvpQo7FarGH4bmDEG3gWCzXqBl+ZZ/S18jNizHH3+e0xTK7LwjF311eC+sBi4LqwZZA65gdjxgiaFk6zkQAvxUAJvzl5BIQPqECgYEA4FOXDE+sgH1Q4uYEF+QCjQKJ49ZJmk/gI7Z/SPKcVqQBDF0BlmCm4IHA7bm9uUOaQJHmHOWHBuD3hPmsInankJlD8aMyJtHNa/YMhWQmgX7yJjyVwJD14rB4yTAj0yvoT1lOT7es0ZDvPHKd8AtatziPcbwZmVKfetO0ooiGetsCgYEA0x6ApEdxfcI1+XXpe4MazzfnqeaRA1VXitOUrtNZt3EUISJkG1475rLEOGxbWlsyXDmPcBYyq+bDBKZG9pzMQOK9rpXvmSKdQO8O4w3SOY0kM/fR2DOvxkmi1zSAi7wpCXsK/W6prBy51uMFy1wL97y40/crPVFDQgZk6z9PPNkCgYADjK8OLdCP8+usu3EDI8N6kbi21zQw8eSdDA01jUk2AcBWfr5Ar+TUFpmD6XV8EfrF3MkkWelqDXM9Mmor3W7HVfWCRE/N13IFrE4EalJFqEmSm1DPTDvny10N6eoXNFGnt8UKc+CTLFTswu+G1dcooQd8CDrrdyg43FK2Y6ylEwKBgQCsPl2cKkG45aOdpIraX0uXNrhGULuNKaqjtB3BSOQQmyxeIC3mekqK3NzkX9tka7U5syiIvUOYJkyD1ZleCO1IHvW8o814ddowqRnPO26Bz9pyn8TQDNNjBp7Zz5b06o3ck0uTGx9JMaKZZF1M3gtRkuKE5Uqc21jxXEAoAl4GeQKBgQCEu4m2OPUrKVbnnzRuy2AAl1lzlDF7TOU/S7guoy0XXAh9EKMJPiEZOkh6U3HgmwRbFWH9pewNkRgzKJyDu08Yb5zn6yF+GEd7x2pUFZ6gODamtdSUQotwbdICyaoapF4oEhVlW0KpKrGSo97FD/WmKVpO7FutJY8XyqvETv8FOw== 641df1b1-b554-4dca-b450-3b2ba1bfcbb3 1
+  693  python sathya.py MIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQC4/6AEmMoR1LkI2s7wj66lI4QL0oY20IDwwc/07q8G1PzFutjZSzIIkfY7H7J1t2YNPKejDHrP8mzcq17V7vUTkHmij4itgtx5ZKsTaTk6auPSFE0S8leIS0xc7W+vixomWrvdsn8boknW1CX5xsl6LwT3ol4llxV/8Tj31ixLbM45nwukf8tyaajRGasKtC7yLYon2fatU5yV9sVlXwtbWGOpip7EqpUGlPncU8Hn6C+AHlgbG7wnWvVbg7u8VoGClL72TEJ4lSPCapkJGcImWp+WW7CYF4Avn5hx50YiKN5aM30q4vOkFXzPUIdSmEyQqJa3Te4KbawdwooNXnejAgMBAAECggEBALBi2hlH7HJv1jSBG4n2FNhTMpVrFpiw2B+1SygHY04qSQ/mBNe5gGz3bkQVBryCLoU0bcliHr6iL/V+V5+2hGkw+Shrni+Bc+EygIKzcuMmAy3MOWh1M8w5rwdzQ2emQzqKjFDm3ZZld+2ivMqYJIWgyyWo5AcHNHKWdnCm/fiymAfiIIhz1YhNAhA+CBPru+F/FT6XVDYNGzyt9Mum+MXDU6N/LZazWKSOfpdi/8WoyooB3hmACdvpQo7FarGH4bmDEG3gWCzXqBl+ZZ/S18jNizHH3+e0xTK7LwjF311eC+sBi4LqwZZA65gdjxgiaFk6zkQAvxUAJvzl5BIQPqECgYEA4FOXDE+sgH1Q4uYEF+QCjQKJ49ZJmk/gI7Z/SPKcVqQBDF0BlmCm4IHA7bm9uUOaQJHmHOWHBuD3hPmsInankJlD8aMyJtHNa/YMhWQmgX7yJjyVwJD14rB4yTAj0yvoT1lOT7es0ZDvPHKd8AtatziPcbwZmVKfetO0ooiGetsCgYEA0x6ApEdxfcI1+XXpe4MazzfnqeaRA1VXitOUrtNZt3EUISJkG1475rLEOGxbWlsyXDmPcBYyq+bDBKZG9pzMQOK9rpXvmSKdQO8O4w3SOY0kM/fR2DOvxkmi1zSAi7wpCXsK/W6prBy51uMFy1wL97y40/crPVFDQgZk6z9PPNkCgYADjK8OLdCP8+usu3EDI8N6kbi21zQw8eSdDA01jUk2AcBWfr5Ar+TUFpmD6XV8EfrF3MkkWelqDXM9Mmor3W7HVfWCRE/N13IFrE4EalJFqEmSm1DPTDvny10N6eoXNFGnt8UKc+CTLFTswu+G1dcooQd8CDrrdyg43FK2Y6ylEwKBgQCsPl2cKkG45aOdpIraX0uXNrhGULuNKaqjtB3BSOQQmyxeIC3mekqK3NzkX9tka7U5syiIvUOYJkyD1ZleCO1IHvW8o814ddowqRnPO26Bz9pyn8TQDNNjBp7Zz5b06o3ck0uTGx9JMaKZZF1M3gtRkuKE5Uqc21jxXEAoAl4GeQKBgQCEu4m2OPUrKVbnnzRuy2AAl1lzlDF7TOU/S7guoy0XXAh9EKMJPiEZOkh6U3HgmwRbFWH9pewNkRgzKJyDu08Yb5zn6yF+GEd7x2pUFZ6gODamtdSUQotwbdICyaoa 641df1b1-b554-4dca-b450-3b2ba1bfcbb3 1
+  694  python sathya.py provate.pem 641df1b1-b554-4dca-b450-3b2ba1bfcbb3 1
+  695  clear
+  696  python sathya.py provate.pem 641df1b1-b554-4dca-b450-3b2ba1bfcbb3 1
+  697  python sathya.py provate.pem 641df1b1-b554-4dca-b450-3b2ba1bfcbb3 1
+  698  docker ps
+  699  docker --delete
+  700  docker --rm
+  701  clear
+  702  docker ps
+  703  docker -rm
+  704  clear
+  705  docker -rm
+  706  clear
+  707  docker ps
+  708  docker build --help
+  709  docker remove
+  710  docker ps
+  711  docker rm --help
+  712  docker --delete  --help
+  713  docker --rm
+  714  docker ps
+  715  docker run --rm
+  716  docker ps
+  717  docker stop
+  718  docker ps
+  719  docker stop 8eeb1fbb8811
+  720  docker ps
+  721  docker run -it bash python:3.9
+  722  docker run -it python:3.9
+  723  docker run -it bash python:3.9
+  724  docker run -it bash --entrypoint=bash python:3.9
+  725  docker run -it--entrypoint=bash python:3.9
+  726  docker run -it --entrypoint=bash python:3.9
+  727  ls
+  728  cd document
+  729  cd documents
+  730  ls -l
+  731  cd test_gcp
+  732  cd test-\gcp
+  733  cd test-gcp
+  734  cd test-gcp
+  735  ls
+  736  python scp_sa.py
+  737  python scp_sa.py
+  738  pip3 install google-cloud-bigquery
+  739  python scp_sa.py
+  740  python scp_sa.py
+  741  python scp_sa.py
+  742  clear
+  743  python scp_sa.py
+  744  pip install --upgrade google-cloud-bigquery
+  745  pip3 install --upgrade google-cloud-bigquery
+  746  python scp_sa.py
+  747  python scp_sa.py
+  748  clear
+  749  pip install --upgrade google-cloud-bigquery
+  750  clear
+  751  python scp_sa.py
+  752  python scp_sa.py
+  753  python scp_sa.py
+  754  clear
+  755  python scp_sa.py
+  756  python scp_sa.py
+  757  cd .~
+  758  cd ~
+  759  ls -al
+  760  cd ./.ssh
+  761  ls
+  762  cat config
+  763  c ~
+  764  cd ~
+  765  cd doceuments
+  766  cd documents
+  767  ls -l
+  768  ssh zoomcamp-2023
+  769  docker
+  770  docker --help
+  771  docker --help -rm
+  772  docker -rm --help
+  773  docker rm --help
+  774  docker ls
+  775  docker images
+  776  docker ps
+  777  ls
+  778  cd ZoomCamp-20232
+  779  cd ZoomCamp-2023
+  780  docker compose
+  781  docker create
+  782  docker exec -it
+  783  docker run -it
+  784  docker build
+  785  docker build .
+  786  docker build .
+  787  docker build .
+  788  docker build .
+  789  docker build .
+  790  docker build .
+  791  docker build .
+  792  bash
+  793  docker stop
+  794  docker kill
+  795  docker kill --help
+  796  docker kill -s
+  797  docker rm
+  798  docker rm --help
+  799  docker rmc
+  800  docker --rm
+  801  docker --rmc
+  802  docker --rc
+  803  docker --delete
+  804  docker ps
+  805  docker build -it .
+  806  docker build -it .
+  807  docker build  .
+  808  docker run
+  809  docker run -it
+  810  docker run --help
+  811  docker build  .
+  812  cd ~
+  813  ls -lrt
+  814  ls -lrt
+  815  ls -lrta
+  816  cd .ssh
+  817  ls
+  818  cat gcp-ssh
+  819  cat gcp_ssh
+  820  cat config
+  821  cd ~
+  822  docker run hello-world
+  823  docker run -it ubuntu bash
+  824  docker ps
+  825  docker run -it ubuntu
+  826  docker run ubuntu
+  827  docker ps
+  828  docker run ubuntu bash
+  829  docker ps
+  830  docker run -it ubuntu bash
+  831  cd documents
+  832  ls -l
+  833  cd zoom-2024
+  834  ls
+  835  docker build -t new:test
+  836  docker build -t new:test .
+  837  docker build -t new:test .
+  838  docker ps
+  839  docker run new:test
+  840  docker ps
+  841  docker run -it new:test
+  842  docker build -t new:test .
+  843  docker build -t new:test .
+  844  docker run -it new:test
+  845  docker build -t new:test .
+  846  docker run -it new:test 2023-01-30
+  847  ls
+  848  \tDocker run -it \\n\t -e POSTGRES_USER="root" \\n\t -e POSTGRES_PASSWORD="root" \\n\t -e POSTGRES_DB="ny_taxi" \\nPostgres:13
+  849  docker run -it \\n -e POSTGRES_USER="root" \\n -e POSTGRES_PASSWORD="root" \\n -e POSTGRES_DB="ny_taxi" \\npostgres:13
+  850  clear
+  851  docker run -it \\n -e POSTGRES_USER="root" \\n -e POSTGRES_PASSWORD="root" \\n -e POSTGRES_DB="ny_taxi" \\n -v $(pwd)/db_data:/var/lib/postgresql/data \\n -p 5432:5432\npostgres:13
+  852  clear
+  853  docker run -it \\n -e POSTGRES_USER="root" \\n -e POSTGRES_PASSWORD="root" \\n -e POSTGRES_DB="ny_taxi" \\n -v $(pwd)/db_data:/var/lib/postgresql/data \\n -p 5432:5432\n postgres:13
+  854  clear
+  855  docker run -it \\n -e POSTGRES_USER="root" \\n -e POSTGRES_PASSWORD="root" \\n -e POSTGRES_DB="ny_taxi" \\n -v $(pwd)/db_data:/var/lib/postgresql/data \\n -p 5432:5432 \\n postgres:13
+  856  docker ps
+  857  docker ps -a
+  858  docker kill dd39778263da
+  859  docker kill cda402cf592e
+  860  docker images
+  861  docker -rm 057c908cda41
+  862  docker --rm 057c908cda41
+  863  docker rm 057c908cda41
+  864  docker image rm 057c908cda41
+  865  docker image rm -f 057c908cda41
+  866  clear
+  867  docker run -it \\n -e POSTGRES_USER="root" \\n -e POSTGRES_PASSWORD="root" \\n -e POSTGRES_DB="ny_taxi" \\n -v $(pwd)/db_data:/var/lib/postgresql/data \\n -p 5432:5432 \\n postgres:13
+  868  sudo lsof -i : 5432
+  869  sudo lsof -i:5432
+  870  sudo kill 552
+  871  docker run -it \\n -e POSTGRES_USER="root" \\n -e POSTGRES_PASSWORD="root" \\n -e POSTGRES_DB="ny_taxi" \\n -v $(pwd)/db_data:/var/lib/postgresql/data \\n -p 5432:5432 \\n postgres:13
+  872  docker ps
+  873  docker kill 04b799040273
+  874  docker ps
+  875  docker ps -a
+  876  clera
+  877  clear
+  878  \t\t\tDocker run -it \\n\t\t\t -e POSTGRES_USER="root" \\n\t\t\t -e POSTGRES_PASSWORD="root" \\n\t\t\t -e POSTGRES_DB="ny_taxi" \\n\t\t\t --network=pg-network \\n\t\t\t --name postgres_db \\nPostgres:13
+  879  Docker run -it \\n\t\t\t -e POSTGRES_USER="root" \\n\t\t\t -e POSTGRES_PASSWORD="root" \\n\t\t\t -e POSTGRES_DB="ny_taxi" \\n\t\t\t --network=pg-network \\n\t\t\t --name postgres_db \\npostgres:13
+  880  docker ps
+  881  \t\t\tDocker run -it \\n\t\t\t -e POSTGRES_USER="root" \\n\t\t\t -e POSTGRES_PASSWORD="root" \\n\t\t\t -e POSTGRES_DB="ny_taxi" \\n\t\t\t --network=pg-network \\n\t\t\t --name postgres_db \\n\t\t\tPostgres:13
+  882  \t\t\tDocker run -it \\n\t\t\t -e POSTGRES_USER="root" \\n\t\t\t -e POSTGRES_PASSWORD="root" \\n\t\t\t -e POSTGRES_DB="ny_taxi" \\n\t\t\t --network=pg-network \\n\t\t\t --name postgres_db \\n\t\t\tpostgres:13
+  883  docker ps
+  884  docker ps -a
+  885  docker kill 1cdd1fcde40a
+  886  docker rm 1cdd1fcde40a
+  887  docker rm e0f9dfa46a48
+  888  \t\t\tDocker run -it \\n\t\t\t -e POSTGRES_USER="root" \\n\t\t\t -e POSTGRES_PASSWORD="root" \\n\t\t\t -e POSTGRES_DB="ny_taxi" \\n\t\t\t --network=pg-network \\n\t\t\t --name postgres_db \\n\t\t\tpostgres:13
+  889  docker ps -a
+  890  docker rm 1470c9949c50
+  891  docker ps -a
+  892  clear
+  893  docker run -it \\n -e POSTGRES_USER="root" \\n -e POSTGRES_PASSWORD="root" \\n -e POSTGRES_DB="ny_taxi" \\n -v $(pwd)/db_data:/var/lib/postgresql/data \\n -p 5432:5432 \\n --network=network-pg \\n --name postfres_db \\n postgres:13
+  894  create docker network network-pg
+  895  docker create network network-pg
+  896  docker network create network-pg
+  897  docker network ls
+  898  docker run -it \\n -e POSTGRES_USER="root" \\n -e POSTGRES_PASSWORD="root" \\n -e POSTGRES_DB="ny_taxi" \\n -v $(pwd)/db_data:/var/lib/postgresql/data \\n -p 5432:5432 \\n --network=network-pg \\n --name postfres_db \\n postgres:13
+  899  docker run -it \\n -e POSTGRES_USER="root" \\n -e POSTGRES_PASSWORD="root" \\n -e POSTGRES_DB="ny_taxi" \\n -v $(pwd)/db_data:/var/lib/postgresql/data \\n -p 5432:5432 \\n --network=network-pg \\n --name postgres_db \\n postgres:13
+  900  pgcli
+  901  pgcli --help
+  902  pgcli -h localhost -p 5443 -u root -d ny_taxi
+  903  pgcli -h localhost -p 5432 -u root -d ny_taxi
+  904  pgcli
+  905  pgcli -h localhost -p 5432 -u root -d ny_taxi
+  906  \tDocker run -it \\n\t -e PGADMIN_DEFAULT_EMAIL="user@user.com" \\n\t -e PGADMIN_DEFAULT_PASSWORD=root \\n\t -p 8080:80 \\n dpage/pgadmin
+  907  docker 
+  908  docker ps
+  909  Docker run -it \\n\t -e PGADMIN_DEFAULT_EMAIL="user@user.com" \\n\t -e PGADMIN_DEFAULT_PASSWORD=root \\n\t -p 8080:80 \\n dpage/pgadmin
+  910  Docker run -it \\n\t -e PGADMIN_DEFAULT_EMAIL="user@user.com" \\n\t -e PGADMIN_DEFAULT_PASSWORD=root \\n\t -p 8080:80 \\n dpage/pgadmin14
+  911  docker run hello-world
+  912  docker run -it -e PGADMIN_DEFAULT_EMAIL="user@user.com" -ePGADMIN_DEFAULT_PASSWORD="root" -p 8080:80 dpage/pgadmin
+  913  docker run -it \\n    -p 80:80 \\n    -e 'PGADMIN_DEFAULT_EMAIL=user@user.com' \\n    -e 'PGADMIN_DEFAULT_PASSWORD=root' \\n    -d dpage/pgadmin4
+  914  docker pas
+  915  docker ps
+  916  docker kill cd40b4932eb7
+  917  docker run -it \\n    -p 8080:80 \\n    -e 'PGADMIN_DEFAULT_EMAIL=user@user.com' \\n    -e 'PGADMIN_DEFAULT_PASSWORD=root' \\n    -d dpage/pgadmin4
+  918  docker ps
+  919  docker inspect b670a4d27286
+  920  clear
+  921  \t\t\t\tdocker run -it \\n\t\t\t\t    -p 80:80 \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_EMAIL=user@user.com' \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_PASSWORD=root' \\n\t\t\t\t    --network=pg-network \\n\t\t\t\t    --name pgadmin-doc \\n    -d dpage/pgadmin4
+  922  docker network ls
+  923  docker run -it \\n\t\t\t\t    -p 80:80 \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_EMAIL=user@user.com' \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_PASSWORD=root' \\n\t\t\t\t    --network=pg-network \\n\t\t\t\t    --name pgadmin-doc \\ndpage/pgadmin4
+  924  docker ps
+  925  docker kill e0f9dfa46a48
+  926  docker run -it \\n\t\t\t\t    -p 80:80 \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_EMAIL=user@user.com' \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_PASSWORD=root' \\n\t\t\t\t    --network=pg-network \\n\t\t\t\t    --name pgadmin-doc \\ndpage/pgadmin4
+  927  docker ps -a
+  928  docker kill 1cdd1fcde40a
+  929  docker run -it \\n\t\t\t\t    -p 80:80 \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_EMAIL=user@user.com' \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_PASSWORD=root' \\n\t\t\t\t    --network=pg-network \\n\t\t\t\t    --name pgadmin-doc \\ndpage/pgadmin4
+  930  docker run -it \\n\t\t\t\t    -p 80:80 \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_EMAIL=user@user.com' \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_PASSWORD=root' \\n\t\t\t\t    --network=pg-network \\n\t\t\t\t    --name pgadmin-d \\ndpage/pgadmin4
+  931  docker run -it \\n\t\t\t\t    -p 8080:80 \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_EMAIL=user@user.com' \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_PASSWORD=root' \\n\t\t\t\t    --network=network-pg \\n\t\t\t\t    --name pgadmin-d \\ndpage/pgadmin4
+  932  docker ps -a
+  933  docker rm b198dbf8af07
+  934  docker rm b198dbf8af07
+  935  docker rm 7a9e24bc1c04
+  936  docker run -it \\n\t\t\t\t    -p 8080:80 \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_EMAIL=user@user.com' \\n\t\t\t\t    -e 'PGADMIN_DEFAULT_PASSWORD=root' \\n\t\t\t\t    --network=network-pg \\n\t\t\t\t    --name pgadmin-d \\ndpage/pgadmin4
+  937  jupyter notebbok
+  938  jupyter notebbok
+  939  clear
+  940  jupyter
+  941  jupyter notebook
+  942  docker ps
+  943  ssh zoomcamp-2024
+  944  gh codespace ssh -c zoomcamp-2024
+  945  gh codespace ssh
+  946  brew install gh
+  947  brew update gh
+  948  brew upgrade gh
+  949  gh codespace ssh -c zoomcamp-2024
+  950  gh auth login -s zoomcamp-2024
+  951  gh codespace ssh -c zoomcamp-2024
+  952  gh auth login -s zoomcamp-2024
+  953  ls
+  954  ls -a
+  955  cd .ssh
+  956  ;s
+  957  ls
+  958  cat config
+  959  vi config
+  960  ssh de-zoomcamp-2024
+  961  exit
+  962  cd ~
+  963  ssh -nd 2222 itv010693@g01.itversity.com 
+  964  ssh -ND 2222 itv010693@g01.itversity.com 
+  965  clear
+  966  ssh -ND itv010693@g01.itversity.com
+  967  ssh -ND 2222 itv010693@g01.itversity.com
+  968  ssh -ND 2222 itv010693@g01.itversity.com
+  969  exit
+  970  ssh -ND 2222 itv010693@g01.itversity.com
+  971  ssh -ND 2222 itv010693@g01.itversity.com
+  972  ssh -ND 2222 itv010693@g01.itversity.com
+  973  jupyter notebook
+  974  jupyter notebook
+  975  sudo PROFILES -N
+  976  sudo jamf policy -trigget
+  977  ssh 10.34.240.91
+  978  ls
+  979  ssh 10.34.240.91
+  980   . /Users/m0l0ge6/.local/share/virtualenvs/Demo-TrendyTech-pxamr8gf/bin/activate
+  981  python --version
+  982  pyspark --version
+  983  pyspark -v
+  984  spark
+  985  pyspark
+  986  clear
+  987  pyspark
+  988  spark
+  989  pyspark
+  990  pipenv --rm
+  991  exit
+  992   . /Users/m0l0ge6/.local/share/virtualenvs/Demo-TrendyTech-pxamr8gf/bin/activate
+  993  pip list
+  994  exit()\nexit
+  995  exit
+  996  exit()\nexit()\nexit
+  997  exit
+  998  Exit
+  999  exit
+ 1000  Exit()\nexit
+ 1001  pwd
+ 1002  pipenv install python 3.10
+ 1003  pip
+ 1004  pip install pipenv
+ 1005  pip install --upgrade pipi
+ 1006  pip install --upgrade pip
+ 1007  pipenv install python 3.10
+ 1008  pipenv install pyspark
+ 1009  pipenv shell
+ 1010  pipenv --rm
+ 1011  pip install pyenv
+ 1012  clear
+ 1013  pipenv run python
+ 1014  pipenv install
+ 1015  pipenv shell
+ 1016  clear
+ 1017  pipenv shell
+ 1018   . /Users/m0l0ge6/.local/share/virtualenvs/Demo-TrendyTech-pxamr8gf/bin/activate
+ 1019   . /Users/m0l0ge6/.local/share/virtualenvs/Demo-TrendyTech-pxamr8gf/bin/activate
+ 1020  pip list
+ 1021  pipenv install pytest
+ 1022  pipenv uninstall pytest
+ 1023  pipenv install pytest --dev
+ 1024  pyenv install 3.10
+ 1025  git status
+ 1026  git init
+ 1027  git branch -m main
+ 1028  git status
+ 1029  git add origin https://github.com/lokemurali/trendytech-projdemo.git
+ 1030  git remote add origin https://github.com/lokemurali/trendytech-projdemo.git
+ 1031  git status
+ 1032  git add Pipfile
+ 1033  git status
+ 1034  git commit -a -m "commit all the changes"
+ 1035  git status
+ 1036  git commit -a -m "commit all the changes"
+ 1037  git add .
+ 1038  git status
+ 1039  git commit -m "commit all the changes"
+ 1040  git status
+ 1041  git push origin main
+ 1042  git status
+ 1043  git branch
+ 1044  git branch new_feature1
+ 1045  git branch
+ 1046  git checkout new_feature1
+ 1047  git branch
+ 1048  git status
+ 1049  git checkout main
+ 1050  git status
+ 1051  git checkout main
+ 1052  git status
+ 1053  git checkout main
+ 1054  git brach
+ 1055  git branch
+ 1056  git checkout new_feature1
+ 1057  git status
+ 1058  git branch
+ 1059  git add .
+ 1060  git commit -m "modified the logger.py file"
+ 1061  git status
+ 1062  clear
+ 1063  git checkout main
+ 1064  git status
+ 1065  git brach
+ 1066  git branch
+ 1067  git push origin new_feature1
+ 1068  clear
+ 1069  git checkout main
+ 1070  git status
+ 1071  git brach
+ 1072  git branch
+ 1073  git branch new_feature1
+ 1074  git checkout new_feature1
+ 1075  git status
+ 1076  git checkout main
+ 1077  git status
+ 1078  git pull origin main
+ 1079  histoty
+ 1080  history -cat git_commands.txt
+ 1081  history -cat git_commands.txt
+ 1082  history
+ 1083  history > git_command.txt
+ 1084  clear
+ 1085  history
+ 1086  history 100
+ 1087  history 50
+ 1088  history 5
+ 1089  journalctl | git
+ 1090  journalctl | grep git
+ 1091  dmesg|grep git
+ 1092  sudo dmesg|grep git
+ 1093  sudo dmesg|grep git > git_cmd.txt
+ 1094  history 50 > cat git_command.txt
+ 1095  history 50 > vi git_command.txt
