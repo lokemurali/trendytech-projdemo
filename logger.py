@@ -31,4 +31,6 @@ class Log4j(object):
         :return: None
         """
         self.logger.info(message)
+
+# added the this line in the new brach.
         
